@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 400px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Margen entre los botones */
+}
+
+.button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:focus {
+    outline: none;
+}
+
+.yes {
+    background-color: #2ecc71; /* Verde */
+}
+
+.no {
+    background-color: #e74c3c; /* Rojo */
+    font-size: 18px;  /* Aseguramos que el botón "No" no cambie de tamaño */
+}
+
+/* Flecha de regreso */
+.back-arrow {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.back-arrow:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin: auto;
+    }
+
+    .profiles {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profiles img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .open-anytime button {
+        width: 100%;
+    }
+}
+

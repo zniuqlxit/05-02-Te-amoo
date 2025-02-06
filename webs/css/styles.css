@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #111;
+    color: white;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.profiles {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.profiles img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.profiles img:hover {
+    transform: scale(1.1);
+}
+
+.profile {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.profile.animate img {
+    transform: scale(1.5);
+    opacity: 0;
+}
+
+.open-anytime button {
+    background-color: rgb(240, 88, 88);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    padding: 10px 20px;
+    border: 2px solid rgb(240, 88, 88);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.open-anytime button:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Flecha de regreso */
+.back-arrow {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.back-arrow:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin: auto;
+    }
+
+    .profiles {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profiles img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .open-anytime button {
+        width: 100%;
+    }
+}
