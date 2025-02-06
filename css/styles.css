@@ -54,3 +54,42 @@ body {
     background-color: black;
     color: white;
 }
+
+/* Flecha de regreso */
+.back-arrow {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.back-arrow:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin: auto;
+    }
+
+    .profiles {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profiles img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .open-anytime button {
+        width: 100%;
+    }
+}
