@@ -3,13 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para Eiza</title>
-    <style>
-        body { text-align: center; font-family: Arial, sans-serif; padding: 20px; }
-    </style>
+    <title>Pre San Valentin</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        function animateProfile(profile, url) {
+            profile.classList.add('animate');
+            setTimeout(() => {
+                window.location.href = url;
+            }, 1000);
+        }
+    </script>
 </head>
 <body>
-    <h1>Hola, Eiza 💖</h1>
-    <p>Esta es una mini página especial para ti.</p>
+    <div class="container">
+        <h1>Mi niñaa, elige una fechaap</h1>
+        <div class="profiles">
+            <div class="profile" onclick="animateProfile(this, 'webs/My_pretty_girl.pdf')">
+                <img src="img/perfil1.jfif" alt="05" class="large-image">
+                <p>05</p>
+            </div>
+            <div class="profile" onclick="animateProfile(this, 'webs/trabajando.html')">
+                <img src="img/perfil2.jfif" alt="06" class="large-image">
+                <p>06</p>
+            </div>
+            <div class="profile" onclick="animateProfile(this, 'webs/trabajando.html')">
+                <img src="img/perfil3.jfif" alt="07" class="large-image">
+                <p>07</p>
+            </div>
+            <div class="profile" onclick="animateProfile(this, 'webs/trabajando.html')">
+                <img src="img/perfil4.jfif" alt="08" class="large-image">
+                <p>08</p>
+            </div>
+        </div>
+        <div class="open-anytime">
+            <button onclick="window.location.href='webs/abreme.html'">Ábreme cuando quieras</button>
+        </div>
+    </div>
 </body>
 </html>
