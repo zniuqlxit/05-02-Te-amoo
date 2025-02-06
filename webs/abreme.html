@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ábreme cuando quieras</title>
+    <link rel="stylesheet" href="../css/stylesabre.css">
+    <script>
+        let noCounter = 0;
+
+        function changeButton(response) {
+            const yesButton = document.getElementById('yesButton');
+            const noButton = document.getElementById('noButton');
+
+            if (response === 'yes') {
+                // Redirigir a la página "si.html"
+                window.location.href = './si.html';
+            } else {
+                // Cambiar el texto del botón "No"
+                const messages = [
+                    "Andaa mmmr no te arrepentirás",
+                    "¿Seguraa? Piensaloo",
+                    "Porfiss, chiii?",
+                    "Ashh, solo di que sii",
+                    "Mmmmm, voy a pedir explicaciones eh"
+                ];
+
+                noButton.textContent = messages[noCounter % messages.length];
+                noCounter++;
+
+                // Aumentar el tamaño del botón "Sí" solo
+                yesButton.style.fontSize = `${parseInt(window.getComputedStyle(yesButton).fontSize) + 5}px`;
+                yesButton.style.transition = 'font-size 0.3s ease'; // Transición suave al agrandarse
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <img src="../img/valentines_gif.gif" alt="Valentine's GIF" class="valentine-gif">  <h1>¿Quieres ser mi San Valentín?</h1>
+        <div class="buttons-container">
+            <div class="button-wrapper">
+                <button id="yesButton" class="yes" onclick="changeButton('yes')">Sí</button>
+            </div>
+            <div class="button-wrapper">
+                <button id="noButton" class="no" onclick="changeButton('no')">No</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
